@@ -18,7 +18,7 @@ xhr.onload = function() {
     //  text += "<tr><td>" + myObj[x].name + "</td></tr>";
     //}
     //text += "</table>"
-    document.getElementById("vaccinecenters").innerValue = obj.body;
+    document.getElementById("vaccinecenters").innerHTML = obj.body;
   }
 
 xhr.onreadystatechange = function () {
