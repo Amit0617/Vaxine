@@ -34,4 +34,5 @@ input{
 
 .layer1{
     background-image: url('./layer1.svg');
+    z=-1;
 }
