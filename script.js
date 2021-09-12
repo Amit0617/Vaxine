@@ -1,8 +1,8 @@
-var pin = document.getElementById("pin").value;
-var date = document.getElementById("date").value;
+let pin = document.getElementById("pin").value;
+let date = document.getElementById("date").value;
 
 function getFromPin() {
-    var url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+ pin+"&date="+date+"";
+    var url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+pin+"&date="+date+"";
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
