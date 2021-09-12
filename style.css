@@ -43,3 +43,7 @@ input{
     background-position:center;
     width:100%;
 }
+
+logo {
+    background-image: url('./logo.jpg');
+}
