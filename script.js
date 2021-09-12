@@ -1,8 +1,8 @@
 let pin = document.getElementById("pin").value;
-let date = document.getElementById("date").value;
+let givendate = document.getElementById("date").value;
 
 function getFromPin() {
-    var url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+pin+"&date="+date+"";
+/*    var url = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+pin+"&date="+date+"";
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
@@ -20,7 +20,7 @@ xhr.onload = function() {
     //text += "</table>"
     let template = {'<>':'div','html':'${center_id} ${name} ${address} ${pincode} ${from} ${to} ${fee_type} ${fee}'};
     document.getElementById("vaccinecenters").innerHTML = data.body;
-    document.write( json2html.render(data,template) );
+    document.write(json2html.render(data,template));
   };
 
 xhr.onreadystatechange = function () {
@@ -31,4 +31,6 @@ xhr.onreadystatechange = function () {
 
 xhr.send();
 
+};*/
+axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin',{params:{pincode= pin,date = givendate}}).then(function(response){console.log(response);});
 };
