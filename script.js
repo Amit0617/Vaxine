@@ -11,14 +11,14 @@ xhr.open("GET", url);
 xhr.setRequestHeader("Accept", "application/json");
 
 xhr.onload = function() {
-    var text = JSON.parse(this.responseText);
-          
+    var obj = JSON.parse(this.responseText);
+    var address = obj.address;     
     //let text = "<table border='3'>"
     //for (let x in myObj) {
     //  text += "<tr><td>" + myObj[x].name + "</td></tr>";
     //}
     //text += "</table>"
-    document.getElementById("vaccinecenters").innerHTML = text;
+    document.getElementById("vaccinecenters").innerHTML = address;
   }
 
 xhr.onreadystatechange = function () {
