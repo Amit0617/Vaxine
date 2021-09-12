@@ -11,7 +11,7 @@ xhr.open("GET", url);
 xhr.setRequestHeader("Accept", "application/json");
 
 xhr.onload = function() {
-    var text = [JSON.parse(this.responseText)];
+    var text = JSON.parse(this.responseText);
           
     //let text = "<table border='3'>"
     //for (let x in myObj) {
