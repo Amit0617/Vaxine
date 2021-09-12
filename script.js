@@ -21,7 +21,7 @@ xhr.onload = function() {
     let template = {'<>':'div','html':'${center_id} ${name} ${address} ${pincode} ${from} ${to} ${fee_type} ${fee}'};
     document.getElementById("vaccinecenters").innerHTML = data.body;
     document.write( json2html.render(data,template) );
-  }
+  };
 
 xhr.onreadystatechange = function () {
    if (xhr.readyState === 4) {
