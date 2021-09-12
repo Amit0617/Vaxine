@@ -52,7 +52,7 @@ xhr.onload = function() {
     //  text += "<tr><td>" + myObj[x].name + "</td></tr>";
     //}
     //text += "</table>"
-    document.getElementById("vaccinecenters").innerValue = obj;
+    document.getElementById("vaccinecenters").innerValue = obj.body;
   }
 
 xhr.onreadystatechange = function () {
