@@ -13,6 +13,39 @@
         <label>Date:</label><br>
         <input id="date" type="text" placeholder="DD-MM-YYYY"><br>
         <button onclick="getFromPin()">Find vaccination centres</button>
+        <div class="container" id="app">
+    <h3 class="text-center">Vaccination Centres</h3>
+    <div class="columns medium-4" v-for="(result, index) in results">
+    <div class="card">
+      <div class="card-section">
+        <p> {{ index }} </p>
+      </div>
+        <div class="card-divider">
+        <p>$ {{ result.center_id }}</p>
+      </div>
+      <div class="card-section">
+        <p>$ {{ result.name }}</p>
+      </div>
+      <div class="card-section">
+        <p>$ {{ result.address }}</p>
+      </div>
+       <div class="card-section">
+        <p>$ {{ result.available_capacity }}</p>
+      </div>
+       <div class="card-section">
+        <p>$ {{ result.fee }}</p>
+      </div>
+        <div class="card-section">
+        <p>$ {{ result.pincode }}</p>
+      </div>
+        <div class="card-section">
+        <p>$ {{ result.slots }}</p>
+      </div>
+       <div class="card-section">
+        <p>$ {{ result.vaccine }}</p>
+      </div> 
+    </div>
+  </div>
         <div id="vaccinecenters"></div>
         <table></table>
 
