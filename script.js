@@ -32,8 +32,18 @@ xhr.onreadystatechange = function () {
 xhr.send();
 
 };*/
-return axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+pin+'&date='+givendate+'').then(function(response){console.log(response);}).catch(function (error) {
-    console.log(error);}).then(function () {// always executed
-});
-    document.getElementById('vaccinecenters').innerHTML = response;
+    const url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+pin+'&date='+givendate+'';
+
+const vm = new Vue({
+        el: '#app',
+        data: {
+          results: []
+        },
+        mounted() {
+          axios.get(url).then(response => {
+            this.results = response.data
+          })
+        }
+      });
+
 };
