@@ -11,14 +11,16 @@ xhr.setRequestHeader("Accept", "application/json");
     
 
 xhr.onload = function() {
-    var obj = JSON.parse(this.responseText);
+    var data = JSON.parse(this.responseText);
     //var address = obj.address;     
     //let text = "<table border='3'>"
     //for (let x in myObj) {
     //  text += "<tr><td>" + myObj[x].name + "</td></tr>";
     //}
     //text += "</table>"
-    document.getElementById("vaccinecenters").innerHTML = obj.body;
+    let template = {'<>':'div','html':'${center_id} ${name} ${address} ${pincode} ${from} ${to} ${fee_type} ${fee}'};
+    document.getElementById("vaccinecenters").innerHTML = data.body;
+    document.write( json2html.render(data,template) );
   }
 
 xhr.onreadystatechange = function () {
