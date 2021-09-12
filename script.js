@@ -32,6 +32,6 @@ xhr.onreadystatechange = function () {
 xhr.send();
 
 };*/
-return axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+pin+'&date='+givendate+'';).then(function(response){console.log(response).catch(function (error) {
+return axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+pin+'&date='+givendate+'';).then(function(response){console.log(response);}).catch(function (error) {
     console.log(error);}).then(function () {// always executed;});
 };
