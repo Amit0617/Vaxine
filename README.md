@@ -6,8 +6,8 @@ It helps in getting information about nearby vaccination centres by pincode in I
 
 ## What to expect later?
 It will be providing complete solution from obtaining information about vacant slots.
-Registraion of Vaccination Seeker
-Allotment and booking of slots
+Registraion of Vaccination Seeker\
+Allotment and booking of slots\
 Printing Vaccination Certificate
 
 ## When to expect?
