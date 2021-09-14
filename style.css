@@ -34,12 +34,12 @@ input{
 
 .layer1{
     background-image: url('./layer1.svg');
-    z:-1;
+    z-index:-1;
 }
 
 .layer2{
     backgorund-image:url('./layer2.svg');
-    z:-1;
+    z-index:-1;
     background-position:center;
     width:100%;
 }
