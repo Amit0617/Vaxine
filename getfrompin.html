@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="style.css">
         <title>Get Vaccination Centre information using Pincode</title>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     </head>
     <body>
@@ -21,6 +21,9 @@
     <div class="columns medium-4" v-for="(result, index) in results">
     <div class="card">
       <div class="card-section">
+        <p> {{ index }} </p>
+      </div>
+        <div class="card-section">
         <p> {{ index }} </p>
       </div>
         <div class="card-divider">
