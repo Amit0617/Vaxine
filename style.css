@@ -38,7 +38,7 @@ input{
 }
 
 .layer2{
-    backgorund-image:url('./layer2.svg');
+    background-image:url('./layer2.svg');
     z-index:-1;
     background-position:center;
     width:100%;
