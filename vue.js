@@ -5,13 +5,15 @@ function getFromPin() { const url = 'https://cdn-api.co-vin.in/api/v2/appointmen
 
 const vm = new Vue({
         el: '#app',
-        data: {
-          results: []
+        data () {
+          return {
+             info : null
+          }
         },
         mounted() {
-          axios.get(url).then(response => {
-            this.results = response.data
-          })
+          axios.get(url).then(response => (
+            this.info = response.sessions
+          ))
         }
       });
 
