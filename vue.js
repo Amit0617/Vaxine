@@ -12,7 +12,7 @@ const vm = new Vue({
         },
         mounted() {
           axios.get(url).then(response => (
-            this.info = response.sessions
+            this.info = response.sessions[0]
           ))
         }
       });
